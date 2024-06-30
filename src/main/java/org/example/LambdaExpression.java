@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -190,5 +191,81 @@ class LambdaExpression {
         };
         System.out.println(calcSum.calc(new int[]{1,2,3,4,5}));
         System.out.println(calcMul.calc(new int[]{1,2,3,4,5}));
+    }
+}*/
+
+//Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
+
+/*
+@FunctionalInterface
+interface CheckWord {
+    boolean isPresent(String s, String temp);
+}
+
+class LambdaExpression {
+    public static void main(String[] args) {
+        CheckWord checkWord = (s, temp) -> {
+            boolean flag = false;
+            String[] list = s.split(" ");
+            for (String i : list) {
+                if (i.equals(temp)) {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        };
+
+        System.out.println(checkWord.isPresent("Hello how are you", "Hello"));
+    }
+}*/
+
+//Write a Java program to implement a lambda expression to find the length of the longest and smallest string in a list.
+
+/*
+@FunctionalInterface
+interface TestLength {
+    List<String> testStringLength(List<String> stringList);
+}
+
+class LambdaExpression {
+    public static void main(String[] args) {
+
+        TestLength testMaxLength = (list) -> {
+            List<String> result = new ArrayList<>();
+            int max = Integer.MIN_VALUE;
+            for (String i : list) {
+
+                if (i.length() >= max) {
+                    max = i.length();
+                }
+            }
+            for (String i : list) {
+                if (i.length() == max) {
+                    result.add(i);
+                }
+            }
+            return result;
+        };
+
+        TestLength testMinLength = (list) -> {
+            List<String> result = new ArrayList<>();
+            int min = Integer.MAX_VALUE;
+            for (String i : list) {
+
+                if (i.length() <= min) {
+                    min = i.length();
+                }
+            }
+            for (String i : list) {
+                if (i.length() == min) {
+                    result.add(i);
+                }
+            }
+            return result;
+        };
+
+        System.out.println(testMaxLength.testStringLength(Arrays.asList("You", "are", "very", "hit")));
+        System.out.println(testMinLength.testStringLength(Arrays.asList("You", "are", "very", "hit")));
     }
 }*/
