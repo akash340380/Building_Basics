@@ -1,8 +1,7 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -87,18 +86,56 @@ public class FunctionPractice {
     }
 }*/
 
+/*public class FunctionPractice
+{
+    static  boolean isEven(int n)
+    {
+        if(n%2 ==0)
+            return true;
+        return false;
+    }
+    public static void main(String[] args)
+    {
+        List<Integer> al = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> result = new ArrayList<>();
+        for(int i:al)
+        {
+            if(isEven(i))
+            {
+                result.add(i);
+            }
+        }
+
+        System.out.println(result);
+
+    }
+}*/
+/*
 public class FunctionPractice {
     public static void main(String[] args) {
         Predicate<Integer> isEven = x -> x % 2 == 0;
-        Function<List<Integer>, List<Integer>> num = x -> {
-            List<Integer> list = new ArrayList<>();
-            for (int i : x) {
-                if (isEven.test(i)) {
-                    list.add(i);
-                }
-            }
-            return list;
+        List<Integer> result = new ArrayList<>();
+        Function<List<Integer>, List<Integer>> res = x -> {
+            for (int i : x) if (isEven.test(i)) result.add(i);
+            return result;
         };
-        System.out.println(num.apply(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
+        System.out.println(res.apply(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
+    }
+}*/
+
+class Comp implements Comparator<Integer>
+{
+    public int compare(Integer a, Integer b)
+    {
+        return b-a;
+    }
+}
+
+public class FunctionPractice {
+    public static void main(String[] args) {
+        List<Integer> al = Arrays.asList(6, 1, 3, 1, 0, 9);
+        Comp c = new Comp();
+        Collections.sort(al, c);
+        System.out.println(al);
     }
 }
