@@ -1,5 +1,7 @@
 package org.practice.java8;
 
+import org.practice.java8.model.Student;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

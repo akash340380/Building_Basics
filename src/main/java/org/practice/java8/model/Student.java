@@ -1,4 +1,4 @@
-package org.practice.java8;
+package org.practice.java8.model;
 
 public class Student
 {
