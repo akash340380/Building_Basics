@@ -1,6 +1,4 @@
-package org.example;
-
-import java.util.function.Predicate;
+package org.practice.java8;
 
 /*
 public class PredicatePractice

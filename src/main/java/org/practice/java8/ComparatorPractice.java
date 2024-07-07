@@ -1,10 +1,8 @@
-package org.example;
+package org.practice.java8;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import org.example.Student;
 
 public class ComparatorPractice {
     public static void main(String[] args) {

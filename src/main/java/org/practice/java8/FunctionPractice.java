@@ -1,10 +1,5 @@
-package org.example;
+package org.practice.java8;
 
-
-import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 /*
 public class FunctionPractice
