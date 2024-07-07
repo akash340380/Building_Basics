@@ -1,5 +1,6 @@
 package org.example;
 
+
 import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -86,30 +87,6 @@ public class FunctionPractice {
     }
 }*/
 
-/*public class FunctionPractice
-{
-    static  boolean isEven(int n)
-    {
-        if(n%2 ==0)
-            return true;
-        return false;
-    }
-    public static void main(String[] args)
-    {
-        List<Integer> al = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        List<Integer> result = new ArrayList<>();
-        for(int i:al)
-        {
-            if(isEven(i))
-            {
-                result.add(i);
-            }
-        }
-
-        System.out.println(result);
-
-    }
-}*/
 /*
 public class FunctionPractice {
     public static void main(String[] args) {
@@ -122,20 +99,3 @@ public class FunctionPractice {
         System.out.println(res.apply(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
     }
 }*/
-
-class Comp implements Comparator<Integer>
-{
-    public int compare(Integer a, Integer b)
-    {
-        return b-a;
-    }
-}
-
-public class FunctionPractice {
-    public static void main(String[] args) {
-        List<Integer> al = Arrays.asList(6, 1, 3, 1, 0, 9);
-        Comp c = new Comp();
-        Collections.sort(al, c);
-        System.out.println(al);
-    }
-}
